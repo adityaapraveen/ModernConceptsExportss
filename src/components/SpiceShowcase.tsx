@@ -1,117 +1,72 @@
-
-import { useEffect, useRef } from 'react';
+import React from 'react';
+import { Card } from './ui/card';
+import { Badge } from './ui/badge';
 
 const spices = [
   {
-    name: 'Turmeric',
+    name: 'Multani Mitti',
     description: 'A golden spice with earthy, warm flavor and powerful health benefits.',
-    color: 'bg-spice-turmeric',
-    origin: 'India & Southeast Asia',
-    image: '/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png',
-    uses: 'Curries, golden milk, medicinal'
+    image: './multanimitti.jpg',
+    benefits: ['Skin Detox', 'Oil Control', 'Cooling Effect'],
   },
   {
-    name: 'Saffron',
+    name: 'Moringa Powder',
     description: 'The world\'s most precious spice, known for its distinct flavor and golden hue.',
-    color: 'bg-spice-saffron',
-    origin: 'Iran, India & Mediterranean',
-    image: '/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png',
-    uses: 'Paella, biryani, desserts'
+    image: './moringapowder.jpg',
+    benefits: ['Rich in Nutrients', 'Boosts Immunity', 'Supports Metabolism'],
   },
   {
-    name: 'Cardamom',
+    name: 'Fox Nuts',
     description: 'Intensely aromatic pods with a complex sweet-spicy flavor profile.',
-    color: 'bg-spice-cardamom',
-    origin: 'Southern India & Sri Lanka',
-    image: '/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png',
-    uses: 'Chai, curries, baked goods'
+    image: './makhana.jpg',
+    benefits: ['High in Protein', 'Low Glycemic Index', 'Rich in Antioxidants'],
   },
   {
-    name: 'Paprika',
+    name: 'Coffee',
     description: 'A versatile spice ranging from mild to hot with a sweet pepper flavor.',
-    color: 'bg-spice-paprika',
-    origin: 'Central America & Europe',
-    image: '/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png',
-    uses: 'Stews, marinades, seasoning'
-  }
+    image: './coffee.jpg',
+    benefits: ['Boosts Energy', 'Rich in Antioxidants', 'Enhances Mood'],
+  },
 ];
 
-const SpiceShowcase = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const elements = sectionRef.current.querySelectorAll('.scroll-reveal');
-        
-        elements.forEach((element) => {
-          const rect = element.getBoundingClientRect();
-          const isVisible = rect.top < window.innerHeight * 0.8;
-          
-          if (isVisible) {
-            element.classList.add('revealed');
-          }
-        });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on mount
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+export const SpiceShowcase = () => {
   return (
-    <section 
-      id="spices" 
-      ref={sectionRef}
-      className="py-20 relative overflow-hidden"
-    >
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-16 scroll-reveal">
-          <div className="title-badge">Our Collection</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Spices</h2>
-          <p className="max-w-2xl mx-auto text-gray-700">
+    <section id='productcollection' className="py-24 bg-gradient-to-b from-sage-50/50 to-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4 text-sage-700 border-sage-200 bg-sage-50">
+            Our Products
+          </Badge>
+          <h2 className="text-4xl font-bold mb-4 text-earth-800">Discover Our Products</h2>
+          <p className="text-lg text-earth-600 max-w-2xl mx-auto">
             Explore our carefully selected spices that bring authentic flavors from around the world to your kitchen.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {spices.map((spice, index) => (
-            <div 
-              key={index} 
-              className="scroll-reveal"
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="spice-card h-full flex flex-col">
-                <div className={`w-20 h-20 ${spice.color} rounded-full mb-6 shadow-lg flex items-center justify-center`}>
-                  <span className="font-playfair text-white font-bold">
-                    {spice.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-playfair font-bold text-xl mb-2">{spice.name}</h3>
-                <p className="text-gray-700 mb-4 flex-grow">{spice.description}</p>
-                <div className="mt-auto space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Origin:</span>
-                    <span className="font-medium">{spice.origin}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Uses:</span>
-                    <span className="font-medium">{spice.uses}</span>
-                  </div>
+        <div className="grid md:grid-cols-4 gap-8">
+          {spices.map((spice) => (
+            <Card key={spice.name} className="group hover-lift overflow-hidden bg-white">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={spice.image}
+                  alt={spice.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-earth-800">{spice.name}</h3>
+                <p className="text-earth-600 mb-4">{spice.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {spice.benefits.map((benefit, index) => (
+                    <div key={index} className="inline-block text-green-700 bg-green-100 p-2 rounded-md text-xs">
+                      {benefit}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-0 w-40 h-40 rounded-full bg-spice-paprika/5 blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-0 w-40 h-40 rounded-full bg-spice-saffron/5 blur-3xl"></div>
     </section>
   );
 };

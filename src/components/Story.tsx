@@ -51,20 +51,24 @@ const Story = () => {
           </div>
           
           <div className="md:w-1/2 scroll-reveal">
-            <div className="title-badge">Our Heritage</div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">A Journey Through Tradition</h2>
+            {/* <div className="title-badge">Our Heritage</div> */}
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Bringing India's Richness to the World.</h2>
             <p className="text-gray-700 mb-6">
-              Our story begins in the rich soils of traditional spice-growing regions, where 
-              generations of farmers have cultivated these precious ingredients with care and expertise.
+              Our journey begins in the heart of India, where generations of artisans, 
+              farmers, and craftsmen have perfected their skills, creating products that 
+              reflect the richness of our land and culture. From fertile fields to skilled 
+              hands, every item carries a legacy of dedication and authenticity.
+
             </p>
             <p className="text-gray-700 mb-6">
-              We work directly with farmers and artisans who maintain time-honored techniques, 
-              ensuring that each spice reaches you with its authentic flavor and aroma intact.
+              At Modern Concepts Exports, we partner with those who uphold these traditions, 
+              ensuring that every product—be it nutrient-rich Makhana, powerful Moringa, aromatic 
+              Coffee, or pure Multani Mitti—reaches the world in its finest form.
+
             </p>
             <p className="text-gray-700 mb-8">
-              From these local origins to kitchens around the world, we bridge cultures through taste, 
-              connecting the hands that nurture the land with the chefs and home cooks who create moments 
-              of joy through food.
+              By blending heritage with modern trade, we take India's best to global markets, 
+              bridging local to global.
             </p>
             <a 
               href="#contact" 

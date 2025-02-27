@@ -11,12 +11,12 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 rounded-full bg-spice-saffron flex items-center justify-center">
-                <span className="font-playfair font-bold text-white">S</span>
+                <span className="font-playfair font-bold text-white"><img src="./nobackgroundMCE.png" alt="" /></span>
               </div>
-              <span className="font-playfair font-semibold text-xl">Spice Route</span>
+              <span className="font-playfair font-semibold text-xl">From Local To Global</span>
             </div>
             <p className="text-white/80 mb-6 max-w-xs">
-              Connecting cultures through authentic spices, from local farms to global kitchens.
+              Connecting Cultures Through Authentic Indian Products, from Local Roots to Global Markets.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">
@@ -43,11 +43,11 @@ const Footer = () => {
               <li>
                 <a href="#hero" className="text-white/80 hover:text-white transition-colors">Home</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#journey" className="text-white/80 hover:text-white transition-colors">Our Journey</a>
-              </li>
+              </li> */}
               <li>
-                <a href="#spices" className="text-white/80 hover:text-white transition-colors">Spice Collection</a>
+                <a href="#productcollection" className="text-white/80 hover:text-white transition-colors">Product Collection</a>
               </li>
               <li>
                 <a href="#story" className="text-white/80 hover:text-white transition-colors">Our Story</a>
@@ -64,21 +64,21 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-spice-saffron mt-1 mr-3" />
                 <span className="text-white/80">
-                  123 Spice Route, <br />
-                  Flavor District, <br />
-                  Global City, 10001
+                  73-36 1st Main Rd,<br />
+                  Mysore Rd, <br />
+                  Bengaluru, 560026
                 </span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-spice-saffron mr-3" />
-                <a href="mailto:info@spiceroute.com" className="text-white/80 hover:text-white transition-colors">
-                  info@spiceroute.com
+                <a href="mailto:modernconcepts.exports@gmail.com" className="text-white/80 hover:text-white transition-colors">
+                  modernconcepts.exports@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-spice-saffron mr-3" />
                 <a href="tel:+1234567890" className="text-white/80 hover:text-white transition-colors">
-                  +1 (234) 567-890
+                  +91 7349255008
                 </a>
               </li>
             </ul>
@@ -86,7 +86,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-16 pt-8 border-t border-white/10 text-center text-white/60 text-sm">
-          <p>&copy; {year} Spice Route. All rights reserved.</p>
+          <p>&copy; {year} Modern Concepts Exports. All rights reserved.</p>
         </div>
       </div>
       

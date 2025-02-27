@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -32,17 +31,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-spice-saffron flex items-center justify-center">
-              <span className="text-white font-playfair font-bold">S</span>
-            </div>
-            <span className="font-playfair font-semibold text-lg">Spice Route</span>
+            {/* <div className="w-8 h-8 rounded-full bg-spice-saffron flex items-center justify-center">
+              <span className="text-white font-playfair font-bold"></span>
+            </div> */}
+            <span className="font-playfair font-semibold text-lg">
+              <img src="./nobackgroundMCE.png" alt="" className="w-16 h-16" />
+            </span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#hero" className="text-sm font-medium hover:text-spice-saffron transition-colors">Home</a>
             <a href="#journey" className="text-sm font-medium hover:text-spice-saffron transition-colors">Journey</a>
-            <a href="#spices" className="text-sm font-medium hover:text-spice-saffron transition-colors">Our Spices</a>
+            <a href="#spices" className="text-sm font-medium hover:text-spice-saffron transition-colors">Our Products</a>
             <a href="#story" className="text-sm font-medium hover:text-spice-saffron transition-colors">Story</a>
             <a 
               href="#contact" 

@@ -62,6 +62,33 @@ This project is built with .
 
 ## How can I deploy this project?
 
+### Deploy to GitHub Pages
+
+This project is set up to be deployed to GitHub Pages. There are two ways to deploy:
+
+#### Automatic Deployment (Recommended)
+
+The project includes a GitHub Actions workflow that automatically deploys the site to GitHub Pages whenever changes are pushed to the main branch.
+
+1. Make sure your repository is public or you have GitHub Pages enabled for your repository
+2. Push your changes to the main branch
+3. GitHub Actions will automatically build and deploy your site
+4. Your site will be available at `https://[your-username].github.io/ModernConceptsExports/`
+
+#### Manual Deployment
+
+You can also deploy manually using the following commands:
+
+```sh
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Other Deployment Options
+
 Simply open [Lovable](https://lovable.dev/projects/a5458c52-f5b7-4c26-8148-8fbfb7f75600) and click on Share -> Publish.
 
 ## I want to use a custom domain - is that possible?

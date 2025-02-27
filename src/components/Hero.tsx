@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -22,14 +21,15 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
             <div className={`transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="title-badge">From Local Farms to Global Tables</div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                The Voyage of <span className="text-spice-saffron">Spices</span> 
-                <br />From Local to Global
+              <div className="title-badge">In a world where innovation meets tradition,</div>
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6">
+                {/* The Voyage of <span className="text-spice-saffron">Spices</span> 
+                <br />From Local to Global */}
+                MODERN CONCEPTS EXPORTS
+                <br />
               </h1>
               <p className="text-gray-700 mb-8 md:pr-12 text-lg">
-                Tracing the journey of vibrant flavors that travel across oceans and cultures, 
-                connecting farmers to kitchens around the world.
+                is more than just an exporter—it's a gateway for local artisans, farmers, and businesses to reach the global marketplace.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <a 
@@ -42,7 +42,7 @@ const Hero = () => {
                   href="#spices" 
                   className="px-8 py-3 rounded-full border border-spice-saffron text-spice-saffron font-medium hover:bg-spice-saffron/5 transition-all text-center"
                 >
-                  View Our Spices
+                  View Our Products
                 </a>
               </div>
             </div>
@@ -65,20 +65,26 @@ const Hero = () => {
                 
                 {/* Floating Spice Elements */}
                 <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg animate-float bg-white">
-                  <div className="w-full h-full flex items-center justify-center bg-spice-turmeric">
-                    <span className="font-playfair text-white font-bold">Turmeric</span>
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#d2b48c' }}>
+                    <span className="font-playfair text-white font-bold text-center">Multani Mitti</span>
+                  </div>
+                </div>
+
+                <div className="absolute top-1/3 left-0 -translate-x-1/3 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shadow-lg animate-float bg-white">
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#667e2c' }}>
+                    <span className="font-playfair text-white font-bold text-center">Moringa Powder</span>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg animate-float bg-white" style={{ animationDelay: '1.5s' }}>
-                  <div className="w-full h-full flex items-center justify-center bg-spice-paprika">
-                    <span className="font-playfair text-white font-bold">Paprika</span>
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#3d280d' }}>
+                    <span className="font-playfair text-white font-bold">Coffee</span>
                   </div>
                 </div>
                 
                 <div className="absolute top-1/2 right-0 translate-x-1/3 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shadow-lg animate-float bg-white" style={{ animationDelay: '0.8s' }}>
-                  <div className="w-full h-full flex items-center justify-center bg-spice-cardamom">
-                    <span className="font-playfair text-white font-bold text-xs md:text-sm">Cardamom</span>
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#faf9f6' }}>
+                    <span className="font-playfair text-black font-bold text-xs md:text-sm">Fox Nuts</span>
                   </div>
                 </div>
               </div>
