@@ -73,7 +73,7 @@ The project includes a GitHub Actions workflow that automatically deploys the si
 1. Make sure your repository is public or you have GitHub Pages enabled for your repository
 2. Push your changes to the main branch
 3. GitHub Actions will automatically build and deploy your site
-4. Your site will be available at `https://[your-username].github.io/ModernConceptsExports/`
+4. Your site will be available at `https://[your-username].github.io/ModernConceptsExportss/`
 
 #### Manual Deployment
 
