@@ -44,8 +44,6 @@ const Journey = () => {
     >
       <div className="container mx-auto px-4 md:px-8 relative text-center">
         <div className="text-center mb-8 md:mb-16">
-          <div className="title-badge">The Spice Journey</div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">From Farm to Your Table</h2>
           <p className="max-w-2xl mx-auto text-gray-700">
             Follow the remarkable journey of our spices as they travel from local farms to global destinations, 
             bringing authentic flavors to kitchens worldwide.
