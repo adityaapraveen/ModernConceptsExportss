@@ -100,7 +100,9 @@
   }
   
   .path-line {
-    @apply stroke-spice-gold stroke-[2px] fill-none stroke-dasharray-1000 stroke-dashoffset-1000 animate-path-draw;
+    @apply stroke-spice-gold stroke-[2px] fill-none animate-path-draw;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
   }
   
   .title-badge {
