@@ -1,4 +1,7 @@
 
+/* stylelint-disable */
+/* This file uses Tailwind CSS directives like @apply which may not be recognized by standard CSS linters */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 @tailwind base;
@@ -88,7 +91,7 @@
   }
   
   .spice-card {
-    @apply p-6 flex flex-col items-center transition-all duration-300 backdrop-blur-sm bg-white/50 border border-white/20 rounded-2xl hover:scale-[1.02];
+    @apply p-4 md:p-6 flex flex-col items-center transition-all duration-300 backdrop-blur-sm bg-white/50 border border-white/20 rounded-2xl hover:scale-[1.02] w-full max-w-[280px] md:max-w-xs mx-auto;
   }
   
   .spice-circle {

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 const Story = () => {
@@ -40,7 +39,7 @@ const Story = () => {
             <div className="relative">
               <div className="w-full aspect-square max-w-md mx-auto overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png"
+                  src="./lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png"
                   alt="Our Story"
                   className="w-full h-full object-cover"
                 />

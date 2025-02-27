@@ -9,19 +9,22 @@ const Journey = () => {
       title: 'Local Cultivation', 
       description: 'Indian farmers and artisans carefully grow and create high-quality products using traditional skills and knowledge.',
       icon: <MapPin className="w-6 h-6 text-spice-saffron" />,
-      position: { left: '30%', top: '30%' }
+      position: { left: '30%', top: '30%' },
+      mobileOrder: 1
     },
     { 
       title: 'Global Journey', 
       description: 'Transported across oceans and continents, connecting cultures through taste.',
       icon: <Ship className="w-6 h-6 text-spice-saffron" />,
-      position: { left: '70%', top: '30%' }
+      position: { left: '70%', top: '30%' },
+      mobileOrder: 2
     },
     { 
       title: 'Quality Check', 
       description: 'The products are cleaned, processed, and checked to ensure they meet high-quality standards before being sent worldwide.',
       icon: <Package className="w-6 h-6 text-spice-saffron" />,
-      position: { left: '50%', top: '70%' }
+      position: { left: '50%', top: '70%' },
+      mobileOrder: 3
     }
   ];
 
@@ -37,10 +40,10 @@ const Journey = () => {
     <section 
       id="journey" 
       ref={sectionRef}
-      className="py-20 bg-spice-cream relative flex justify-center items-center h-screen"
+      className="py-20 bg-spice-cream relative flex justify-center items-center min-h-screen"
     >
       <div className="container mx-auto px-4 md:px-8 relative text-center">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <div className="title-badge">The Spice Journey</div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">From Farm to Your Table</h2>
           <p className="max-w-2xl mx-auto text-gray-700">
@@ -49,8 +52,8 @@ const Journey = () => {
           </p>
         </div>
 
-        {/* Journey Path Visualization */}
-        <div className="relative w-full h-[30rem] flex justify-center items-center">
+        {/* Journey Path Visualization - Desktop */}
+        <div className="hidden md:block relative w-full h-[30rem] flex justify-center items-center">
           <svg 
             className="absolute inset-0 w-full h-full" 
             viewBox="0 0 1000 600" 
@@ -89,6 +92,34 @@ const Journey = () => {
                 </div>
                 <h3 className="font-playfair font-bold text-lg mb-2">{stage.title}</h3>
                 <p className="text-sm text-gray-700 max-w-xs">{stage.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Journey Cards - Mobile */}
+        <div className="md:hidden flex flex-col space-y-6">
+          {stages.map((stage, index) => (
+            <div 
+              key={index}
+              className={`transition-all duration-300 transform ${
+                activeStage === index ? 'scale-105' : 'scale-100'
+              }`}
+            >
+              <div className={`spice-card mx-auto max-w-sm ${
+                activeStage === index 
+                  ? 'bg-white/80 shadow-lg border-spice-saffron' 
+                  : 'bg-white/40'
+              }`}>
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all ${
+                  activeStage === index 
+                    ? 'bg-spice-saffron text-white' 
+                    : 'bg-spice-saffron/10 text-spice-saffron'
+                }`}>
+                  {stage.icon}
+                </div>
+                <h3 className="font-playfair font-bold text-lg mb-2">{stage.title}</h3>
+                <p className="text-sm text-gray-700">{stage.description}</p>
               </div>
             </div>
           ))}

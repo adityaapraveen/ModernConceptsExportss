@@ -13,7 +13,7 @@ const Hero = () => {
       className="min-h-screen pt-20 pb-16 md:py-0 md:flex md:items-center relative overflow-hidden"
     >
       <div 
-        className="absolute top-0 left-0 w-full h-full bg-[url('/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png')] bg-cover bg-center opacity-[0.07] z-0"
+        className="absolute top-0 left-0 w-full h-full bg-[url('./lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png')] bg-cover bg-center opacity-[0.07] z-0"
         style={{ backgroundSize: '50%', backgroundRepeat: 'repeat' }}
       ></div>
       
@@ -55,7 +55,7 @@ const Hero = () => {
                   <div className="w-full h-full rounded-full border-2 border-spice-saffron/20 p-4 animate-rotate-slow" style={{ animationDirection: 'reverse' }}>
                     <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
                       <img 
-                        src="/lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png" 
+                        src="./lovable-uploads/a3507432-3981-4891-88f4-9005d9d1f442.png" 
                         alt="From Local to Global" 
                         className="w-full h-full object-cover"
                       />
