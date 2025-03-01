@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/ModernConceptsExportss/", // Updated with correct repository name
+  base: "/ModernConceptsExports/", // Fixed repository name (removed extra 's')
   plugins: [
     react(),
     mode === "development" && componentTagger(),
