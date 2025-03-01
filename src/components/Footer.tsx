@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 rounded-full bg-spice-saffron flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full  flex items-center justify-center">
                 <span className="font-playfair font-bold text-white"><img src="./nobackgroundMCE.png" alt="" /></span>
               </div>
               <span className="font-playfair font-semibold text-xl">From Local To Global</span>

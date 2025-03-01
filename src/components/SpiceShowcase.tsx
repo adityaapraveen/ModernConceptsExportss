@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
+import './ui/SpiceShowCase.css';
 
 const spices = [
   {
@@ -18,13 +19,13 @@ const spices = [
   {
     name: 'Fox Nuts',
     description: 'Premium fox nuts harvested from the pure waters of India.',
-    image: './makhana.jpg',
+    image: './makhana1.jpg',
     benefits: ['High in Protein', 'Low Glycemic Index', 'Rich in Antioxidants'],
   },
   {
     name: 'Coffee',
     description: 'Premium Indian coffee beans with a bold aroma and rich flavor.',
-    image: './coffee.jpg',
+    image: './coffee1.jpg',
     benefits: ['Boosts Energy', 'Rich in Antioxidants', 'Supports Metabolism'],
   },
 ];
@@ -34,12 +35,14 @@ export const SpiceShowcase = () => {
     <section id='productcollection' className="py-24 bg-gradient-to-b from-sage-50/50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-sage-700 border-sage-200 bg-sage-50">
-            Our Products
-          </Badge>
+          
+          <Badge variant="outline" id='text'className="">
+    Our Products
+  </Badge>
+
           <h2 className="text-4xl font-bold mb-4 text-earth-800">Discover Our Products</h2>
           <p className="text-lg text-earth-600 max-w-2xl mx-auto">
-            Explore our carefully selected spices that bring authentic flavors from around the world to your kitchen.
+            Explore our carefully selected products that bring authentic flavours from India.
           </p>
         </div>
         <div className="grid md:grid-cols-4 gap-8">

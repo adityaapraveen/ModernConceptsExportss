@@ -39,7 +39,7 @@ const Hero = () => {
                   Explore The Journey
                 </a>
                 <a 
-                  href="#spices" 
+                  href="#productcollection" 
                   className="px-8 py-3 rounded-full border border-spice-saffron text-spice-saffron font-medium hover:bg-spice-saffron/5 transition-all text-center"
                 >
                   View Our Products

@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Globe, Package, MapPin, Ship } from 'lucide-react';
+import './ui/SpiceShowCase.css'
+import { Badge } from './ui/badge';
+
 
 const Journey = () => {
   const [activeStage, setActiveStage] = useState(0);
@@ -17,14 +20,14 @@ const Journey = () => {
       description: 'Transported across oceans and continents, connecting cultures through taste.',
       icon: <Ship className="w-6 h-6 text-spice-saffron" />,
       position: { left: '70%', top: '30%' },
-      mobileOrder: 2
+      mobileOrder: 3
     },
     { 
       title: 'Quality Check', 
       description: 'The products are cleaned, processed, and checked to ensure they meet high-quality standards before being sent worldwide.',
       icon: <Package className="w-6 h-6 text-spice-saffron" />,
       position: { left: '50%', top: '70%' },
-      mobileOrder: 3
+      mobileOrder: 2
     }
   ];
 
@@ -44,9 +47,13 @@ const Journey = () => {
     >
       <div className="container mx-auto px-4 md:px-8 relative text-center">
         <div className="text-center mb-8 md:mb-16">
+          <Badge variant="outline" id='text'className="">
+    Our Journey
+  </Badge>
+
           <p className="max-w-2xl mx-auto text-gray-700">
-            Follow the remarkable journey of our spices as they travel from local farms to global destinations, 
-            bringing authentic flavors to kitchens worldwide.
+            Follow the remarkable journey of our products as they travel from local farms to global destinations, 
+            bringing authentic flavours worldwide.
           </p>
         </div>
 
@@ -97,29 +104,31 @@ const Journey = () => {
 
         {/* Journey Cards - Mobile */}
         <div className="md:hidden flex flex-col space-y-6">
-          {stages.map((stage, index) => (
-            <div 
-              key={index}
-              className={`transition-all duration-300 transform ${
-                activeStage === index ? 'scale-105' : 'scale-100'
-              }`}
-            >
-              <div className={`spice-card mx-auto max-w-sm ${
-                activeStage === index 
-                  ? 'bg-white/80 shadow-lg border-spice-saffron' 
-                  : 'bg-white/40'
-              }`}>
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all ${
+          {stages
+            .sort((a, b) => a.mobileOrder - b.mobileOrder)
+            .map((stage, index) => (
+              <div 
+                key={index}
+                className={`transition-all duration-300 transform ${
+                  activeStage === index ? 'scale-105' : 'scale-100'
+                }`}
+              >
+                <div className={`spice-card mx-auto max-w-sm ${
                   activeStage === index 
-                    ? 'bg-spice-saffron text-white' 
-                    : 'bg-spice-saffron/10 text-spice-saffron'
+                    ? 'bg-white/80 shadow-lg border-spice-saffron' 
+                    : 'bg-white/40'
                 }`}>
-                  {stage.icon}
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all ${
+                    activeStage === index 
+                      ? 'bg-spice-saffron text-white' 
+                      : 'bg-spice-saffron/10 text-spice-saffron'
+                  }`}>
+                    {stage.icon}
+                  </div>
+                  <h3 className="font-playfair font-bold text-lg mb-2">{stage.title}</h3>
+                  <p className="text-sm text-gray-700">{stage.description}</p>
                 </div>
-                <h3 className="font-playfair font-bold text-lg mb-2">{stage.title}</h3>
-                <p className="text-sm text-gray-700">{stage.description}</p>
               </div>
-            </div>
           ))}
         </div>
       </div>

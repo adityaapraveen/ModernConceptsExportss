@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="title-badge">Get in Touch</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
             <p className="max-w-2xl mx-auto text-gray-700">
-              Have questions about our spices or want to learn more about our journey? 
+              Have questions about our products or want to learn more about our journey? 
               We'd love to hear from you.
             </p>
           </div>

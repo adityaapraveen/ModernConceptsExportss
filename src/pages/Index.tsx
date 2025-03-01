@@ -43,7 +43,6 @@ const Index = () => {
       <Story />
       <Contact />
       <Footer />
-      <ScrollToTop />
     </div>
   );
 };
