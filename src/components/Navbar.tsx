@@ -82,11 +82,11 @@ const Navbar = () => {
               Journey
             </a>
             <a 
-              href="#spices" 
+              href="#productcollection" 
               className="py-2 border-b border-gray-100 text-sm font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Our Spices
+              Our Products
             </a>
             <a 
               href="#story" 
