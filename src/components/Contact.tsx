@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,18 +17,19 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    const mailtoLink = `mailto:modernconcepts.exports@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.name}%0AEmail: ${formData.email}`;
+
+    window.location.href = mailtoLink;
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormData({ name: '', email: '', message: '' });
+
+    // Reset success message after a delay
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after a delay
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      setIsSubmitted(false);
+    }, 5000);
   };
 
   return (
@@ -65,7 +66,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-2xl font-playfair font-bold mb-2">Thank You!</h3>
                 <p className="text-gray-700">
-                  Your message has been sent. We'll get back to you soon.
+                  Your message has been prepared. Please check your email client to send it.
                 </p>
               </div>
             ) : (
@@ -127,7 +128,7 @@ const Contact = () => {
                         : 'bg-spice-saffron text-white hover:shadow-md hover:bg-spice-saffron/90'
                     }`}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Preparing...' : 'Send Message'}
                   </button>
                 </div>
               </form>

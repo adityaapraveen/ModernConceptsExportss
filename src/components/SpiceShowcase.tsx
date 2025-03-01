@@ -5,27 +5,27 @@ import { Badge } from './ui/badge';
 const spices = [
   {
     name: 'Multani Mitti',
-    description: 'A golden spice with earthy, warm flavor and powerful health benefits.',
+    description: 'A natural clay known for its deep cleansing and cooling properties.',
     image: './multanimitti.jpg',
     benefits: ['Skin Detox', 'Oil Control', 'Cooling Effect'],
   },
   {
     name: 'Moringa Powder',
-    description: 'The world\'s most precious spice, known for its distinct flavor and golden hue.',
+    description: 'A superfood packed with vitamins, minerals, and antioxidants for overall wellness.',
     image: './moringapowder.jpg',
-    benefits: ['Rich in Nutrients', 'Boosts Immunity', 'Supports Metabolism'],
+    benefits: ['Boosts Immunity', 'Rich in Nutrients', 'Detoxifying Properties'],
   },
   {
     name: 'Fox Nuts',
-    description: 'Intensely aromatic pods with a complex sweet-spicy flavor profile.',
+    description: 'Premium fox nuts harvested from the pure waters of India.',
     image: './makhana.jpg',
     benefits: ['High in Protein', 'Low Glycemic Index', 'Rich in Antioxidants'],
   },
   {
     name: 'Coffee',
-    description: 'A versatile spice ranging from mild to hot with a sweet pepper flavor.',
+    description: 'Premium Indian coffee beans with a bold aroma and rich flavor.',
     image: './coffee.jpg',
-    benefits: ['Boosts Energy', 'Rich in Antioxidants', 'Enhances Mood'],
+    benefits: ['Boosts Energy', 'Rich in Antioxidants', 'Supports Metabolism'],
   },
 ];
 
