@@ -64,7 +64,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-spice-saffron mt-1 mr-3" />
                 <span className="text-white/80">
-                  73-36 1st Main Rd,<br />
+                  73/36 1st Main Rd,<br />
                   Mysore Rd, <br />
                   Bengaluru, 560026
                 </span>
