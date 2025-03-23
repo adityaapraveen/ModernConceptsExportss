@@ -65,8 +65,8 @@ const Hero = () => {
                 
                 {/* Floating Spice Elements */}
                 <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg animate-float bg-white">
-                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#d2b48c' }}>
-                    <span className="font-playfair text-white font-bold text-center">Multani Mitti</span>
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#B5925C' }}>
+                    <span className="font-playfair text-white font-bold text-center">Cashews</span>
                   </div>
                 </div>
 
@@ -77,8 +77,8 @@ const Hero = () => {
                 </div>
                 
                 <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg animate-float bg-white" style={{ animationDelay: '1.5s' }}>
-                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#3d280d' }}>
-                    <span className="font-playfair text-white font-bold">Coffee</span>
+                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: '#A67B5B' }}>
+                    <span className="font-playfair text-white font-bold">Almonds</span>
                   </div>
                 </div>
                 
