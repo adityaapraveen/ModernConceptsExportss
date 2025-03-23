@@ -2,18 +2,14 @@ import React from 'react';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import './ui/SpiceShowCase.css';
+import { Description } from '@radix-ui/react-toast';
 
 const spices = [
-  {
-    name: 'Multani Mitti',
-    description: 'A natural clay known for its deep cleansing and cooling properties.',
-    image: './multanimitti.jpg',
-    benefits: ['Skin Detox', 'Oil Control', 'Cooling Effect'],
-  },
+
   {
     name: 'Moringa Powder',
     description: 'A superfood packed with vitamins, minerals, and antioxidants for overall wellness.',
-    image: './moringapowder.jpg',
+    image: './MoringaPowder.png',
     benefits: ['Boosts Immunity', 'Rich in Nutrients', 'Detoxifying Properties'],
   },
   {
@@ -23,10 +19,16 @@ const spices = [
     benefits: ['High in Protein', 'Low Glycemic Index', 'Rich in Antioxidants'],
   },
   {
-    name: 'Coffee',
-    description: 'Premium Indian coffee beans with a bold aroma and rich flavor.',
-    image: './coffee1.jpg',
-    benefits: ['Boosts Energy', 'Rich in Antioxidants', 'Supports Metabolism'],
+    name: 'Cashew',
+    description: 'Premium Indian cashews with a rich, creamy texture and naturally sweet flavor.',
+    image: './Cashew.png',
+    benefits: ['Boosts Immunity', 'Rich in Healthy Fats', 'Supports Heart Health'],
+  },
+  {
+    name: 'Almonds',
+    description: 'High-quality almonds packed with essential nutrients for a healthy lifestyle. ',
+    image: './Almonds.png',
+    benefits: ['Enhances Brain Function', 'Rich in Vitamin E', 'Supports Digestion'],
   },
 ];
 
