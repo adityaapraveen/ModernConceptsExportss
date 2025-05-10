@@ -1,0 +1,16 @@
+#text{
+    margin-bottom: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 9999px;
+        background-color: rgb(246 131 15 / 0.1);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 500;
+        --tw-text-opacity: 1;
+        color: rgb(246 131 15 / var(--tw-text-opacity, 1));
+}

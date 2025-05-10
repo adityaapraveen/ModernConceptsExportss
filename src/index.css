@@ -1,0 +1,179 @@
+/* stylelint-disable */
+/* This file uses Tailwind CSS directives like @apply which may not be recognized by standard CSS linters */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 43% 95%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 38 43% 97%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 38 43% 97%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 38 92.7% 50.2%;
+    --primary-foreground: 26 83.3% 14.1%;
+
+    --secondary: 26 83.3% 60.1%;
+    --secondary-foreground: 38 43% 97%;
+
+    --muted: 12 6.5% 85.1%;
+    --muted-foreground: 20 5.9% 40.1%;
+
+    --accent: 155 31.5% 25.9%;
+    --accent-foreground: 38 43% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 38 43% 97%;
+
+    --border: 20 5.9% 86.1%;
+    --input: 20 5.9% 86.1%;
+    --ring: 24 75.5% 59.2%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 38 43% 97%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 38 43% 97%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 38 43% 97%;
+
+    --primary: 38 92.7% 50.2%;
+    --primary-foreground: 26 83.3% 14.1%;
+
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 38 43% 97%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --accent: 155 31.5% 15.9%;
+    --accent-foreground: 38 43% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 38 43% 97%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 75.5% 59.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-spice-background text-foreground font-poppins;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .spice-container {
+    @apply relative overflow-hidden bg-spice-cream rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .spice-card {
+    @apply p-4 md:p-6 flex flex-col items-center transition-all duration-300 backdrop-blur-sm bg-white/50 border border-white/20 rounded-2xl hover:scale-[1.02] w-full max-w-[280px] md:max-w-xs mx-auto;
+  }
+  
+  .spice-circle {
+    @apply rounded-full overflow-hidden border-2 border-spice-gold transition-all duration-300;
+  }
+  
+  .globe-container {
+    @apply relative flex justify-center items-center;
+  }
+  
+  .path-line {
+    @apply stroke-spice-gold stroke-[2px] fill-none animate-path-draw;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  
+  .title-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-spice-saffron/10 text-spice-saffron mb-2;
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-md bg-white/30 border border-white/20 shadow-sm transition-all duration-300;
+  }
+  
+  .journey-point {
+    @apply absolute w-4 h-4 rounded-full bg-spice-saffron shadow-md animate-pulse;
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 169, 48, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 169, 48, 0.8);
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Animations for AboutSection */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
