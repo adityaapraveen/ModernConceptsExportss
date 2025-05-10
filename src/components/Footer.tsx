@@ -34,6 +34,8 @@ const Footer = () => {
                 </svg>
               </a> */}
             </div>
+            <span className='text-white font-bold text-lg'>Disclaimer</span> <br />
+            <span className='text-white/80'>The information provided on this website is based on historical data and may not reflect current or exact figures. Users are advised to verify details independently before making any decisions.</span>
           </div>
           
           <div>

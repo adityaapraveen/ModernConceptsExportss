@@ -123,7 +123,7 @@ const ProfitChart = () => {
                   border: 'none'
                 }}
               />
-              <ReferenceLine y={500} stroke="#DC2626" strokeDasharray="3 3" label="2023" />
+              {/* <ReferenceLine y={500} stroke="#DC2626" strokeDasharray="3 3" label="2023" /> */}
               <Area 
                 type="monotone" 
                 dataKey="profit" 
@@ -139,15 +139,16 @@ const ProfitChart = () => {
         <div className="flex justify-center gap-8 mt-4 flex-wrap">
           <div className="text-center">
             <p className="text-gray-500 text-sm">Annual Growth Rate</p>
-            <p className="text-2xl font-bold text-emerald-600">32%</p>
+            <span className="text-gray-500 text-sm"> approx.<p className="text-2xl font-bold text-emerald-600">32%</p></span>
           </div>
           <div className="text-center">
             <p className="text-gray-500 text-sm">Profit Margin</p>
-            <p className="text-2xl font-bold text-emerald-600">45%</p>
+            <span className="text-gray-500 text-sm"> approx.<p className="text-2xl font-bold text-emerald-600">65%</p></span>
+
           </div>
           <div className="text-center">
-            <p className="text-gray-500 text-sm">ROI</p>
-            <p className="text-2xl font-bold text-emerald-600">3.2x</p>
+            <p className="text-gray-500 text-sm">Expected ROI</p>
+            <span className="text-gray-500 text-sm"> approx.<p className="text-2xl font-bold text-emerald-600">3.2x</p></span>
           </div>
         </div>
       </CardContent>
