@@ -65,7 +65,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-[#F5EFE7]" id="AboutSection" ref={elementsRef}>
+    <section className="py-20 bg-[#F5EFE7]" id="aboutSection" ref={elementsRef}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Map Div - will be ordered second on mobile, first on lg screens */}

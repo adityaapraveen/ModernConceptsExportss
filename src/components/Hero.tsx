@@ -69,7 +69,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-col items-center sm:flex-row sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                 <a 
-                  href="#journey" 
+                  href="#aboutSection" 
                   className="px-8 py-3 rounded-full bg-[#1e392a] text-white font-medium transition-all hover:shadow-md hover:bg-[#1e392a]/90 text-center"
                 >
                   Explore The Journey
