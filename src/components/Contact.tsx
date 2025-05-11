@@ -48,7 +48,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const mailtoLink = `mailto:modernconcepts.exports@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.name}%0AEmail: ${formData.email}`;
+    const mailtoLink = `mailto:mcex@modernconceptsexports.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.name}%0AEmail: ${formData.email}`;
 
     window.location.href = mailtoLink;
 
