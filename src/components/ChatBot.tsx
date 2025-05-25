@@ -53,8 +53,7 @@ Please keep your responses concise, friendly, and focused on providing helpful i
 
 - **Our Products:**
   - Makhana (Foxnuts): Sourced from traditional family farms in Northern India.
-  - Spices, Coffee, Moringa Powder: High-quality Indian origin.
-  - Details on grades, varieties, and uses.
+
 
 - **Our Services:**
   - White Labeling: Custom branding solutions for your business.
@@ -114,7 +113,7 @@ Do not provide information or engage in discussions on any topics not directly r
     if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')) {
       return "Hello there! How can I help you with our products today?";
     } else if (lowerCaseMessage.includes('product') || lowerCaseMessage.includes('spice')) {
-      return "We offer a variety of high-quality Indian products including spices, coffee, makhana, and moringa powder. Would you like to know more about any specific product?";
+      return "We offer a variety of high-quality Makhana. Would you like to know more about any specific product?";
     } else if (lowerCaseMessage.includes('price') || lowerCaseMessage.includes('cost')) {
       return "Our product prices vary based on quantity and packaging. Please visit our contact page to request a detailed price list or quotation.";
     } else if (lowerCaseMessage.includes('shipping') || lowerCaseMessage.includes('delivery')) {
@@ -124,9 +123,9 @@ Do not provide information or engage in discussions on any topics not directly r
     } else if (lowerCaseMessage.includes('quality')) {
       return "All our products undergo rigorous quality checks to ensure they meet international standards. We source directly from farmers to maintain the highest quality.";
     } else if (lowerCaseMessage.includes('organic') || lowerCaseMessage.includes('natural')) {
-      return "Many of our products are organic and naturally grown without harmful chemicals. Each product page specifies if it's certified organic.";
+      return "Our products are organic and naturally grown without harmful chemicals. Each product page specifies if it's certified organic.";
     } else {
-      return "I can only assist with information about Modern Concepts Exports products and services. How can I help you with our spices, coffee, makhana, or other products?";
+      return "I can only assist with information about Modern Concepts Exports products and services. How can I help you with our variety in Makhana?";
     }
   };
 
